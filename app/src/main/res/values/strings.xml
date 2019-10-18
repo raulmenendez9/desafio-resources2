@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Bitlab_resources_hw</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="eslogan">Nos encanta que quieras aplicar a nuestras becas,
+        pero antes de todo necesitamos conocerte más.</string>
+    <string name="message">Tus datos han sido enviados con éxito</string>
+    <string name="success">success</string>
+    <string-array name="spinner">
+        <item>Por redes sociales</item>
+        <item>Un amigo me sugirío</item>
+        <item>Otro</item>
+    </string-array>
+</resources>

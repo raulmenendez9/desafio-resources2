@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Resp_mensajeFragment"
+    android:background="@color/bitlab">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView_bitlab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/image_bitlab_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_bitlab"
+            android:layout_width="324dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="160dp"
+            android:text="@string/eslogan"
+            android:textColor="@color/blanco"
+            android:fontFamily="@font/roboto"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center_horizontal|top"/>
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="133dp"
+            android:layout_height="21dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="48dp"
+            android:fontFamily="@font/roboto"
+            android:text="Nombre completo:"
+            android:textColor="@color/blanco"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="219dp"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/input_name"
+            android:layout_width="325dp"
+            android:layout_height="42dp"
+            android:background="@drawable/input_radius"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="@color/inputs"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.558"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="252dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/text_correo"
+            android:layout_width="133dp"
+            android:layout_height="21dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/roboto"
+            android:text="Correo:"
+            android:textColor="@color/blanco"
+            android:textSize="14sp"
+            tools:layout_editor_absoluteX="48dp"
+            tools:layout_editor_absoluteY="317dp"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/input_correo"
+            android:layout_width="325dp"
+            android:layout_height="42dp"
+            android:background="@drawable/input_radius"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/inputs"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.558"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="354dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/text_telphone"
+            android:layout_width="133dp"
+            android:layout_height="21dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/roboto"
+            android:text="Numero telefónico:"
+            android:textColor="@color/blanco"
+            android:textSize="14sp"
+            tools:layout_editor_absoluteX="48dp"
+            tools:layout_editor_absoluteY="417dp"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/input_telphone"
+            android:layout_width="325dp"
+            android:layout_height="42dp"
+            android:background="@drawable/input_radius"
+            android:ems="10"
+            android:inputType="text|phone"
+            android:textColor="@color/inputs"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.558"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="447dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/text_other"
+            android:layout_width="133dp"
+            android:layout_height="21dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/roboto"
+            android:text="Como te enteraste de Bitlab?"
+            android:textColor="@color/blanco"
+            android:textSize="14sp"
+            tools:layout_editor_absoluteX="48dp"
+            tools:layout_editor_absoluteY="509dp"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="250dp"
+            android:layout_height="42dp"
+            android:background="@drawable/botton_radius"
+            android:text="Enviar"
+            android:textColor="@color/button"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="80dp"
+            tools:layout_editor_absoluteY="633dp" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="324dp"
+            android:layout_height="42dp"
+            android:background="@drawable/input_radius"
+            tools:layout_editor_absoluteX="48dp"
+            tools:layout_editor_absoluteY="555dp"
+            tools:ignore="MissingConstraints"
+            android:entries="@array/spinner"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
