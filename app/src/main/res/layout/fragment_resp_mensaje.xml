@@ -18,7 +18,7 @@ tools:context=".FormularioFragment"
             android:layout_width="252dp"
             android:layout_height="42dp"
             android:layout_marginStart="81dp"
-            android:layout_marginTop="430dp"
+            android:layout_marginTop="424dp"
             android:layout_marginEnd="80dp"
             android:fontFamily="@font/unispace_rg"
             android:gravity="center_horizontal|top"
@@ -26,23 +26,23 @@ tools:context=".FormularioFragment"
             android:textColor="@color/bitlab"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="156dp"
-            android:layout_marginTop="265dp"
-            android:layout_marginEnd="155dp"
-            android:contentDescription="@string/success"
-            app:layout_constraintBottom_toTopOf="@+id/textView2"
+            android:id="@+id/imageView"
+            android:layout_width="152dp"
+            android:layout_height="144dp"
+            android:layout_marginStart="81dp"
+            android:layout_marginTop="240dp"
+            android:layout_marginEnd="80dp"
+            android:src="@drawable/ic_success_1"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/ic_success_1" />
+            tools:ignore="MissingConstraints" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -61,24 +61,21 @@ class FormularioFragment : Fragment() {
             button()
         }
     }
+    fun button(){
 
+        if (textname!!.text.toString().equals("") && textemail!!.text.toString().equals("")){
+            Toast.makeText(activity, "Debe ingresar nombre y correo", Toast.LENGTH_LONG).show()
 
+        }else{
+            listener!!.loadsucces(Resp_mensajeFragment())
 
+        }
+    }
 
     // TODO: Rename method, update argument and hook method into UI event
     fun onButtonPressed(uri: Uri) {
         listener?.onFragmentInteraction(uri)
     }
-     fun button(){
-
-         if (textname!!.text.toString().equals("") && textemail!!.text.toString().equals("")){
-                 Toast.makeText(activity, "Debe ingresar nombre y correo", Toast.LENGTH_LONG).show()
-
-         }else{
-                 listener!!.loadsucces(Resp_mensajeFragment())
-
-         }
-     }
 
 
     override fun onAttach(context: Context) {
