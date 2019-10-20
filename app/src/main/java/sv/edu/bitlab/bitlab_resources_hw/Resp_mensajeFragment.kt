@@ -48,7 +48,7 @@ class Resp_mensajeFragment : Fragment() {
         listener?.onFragmentInteraction(uri)
     }
 
-    override fun onAttach(context: Context) {
+    /*override fun onAttach(context: Context) {
         super.onAttach(context)
         if (context is OnFragmentInteractionListener) {
             listener = context
@@ -60,7 +60,7 @@ class Resp_mensajeFragment : Fragment() {
     override fun onDetach() {
         super.onDetach()
         listener = null
-    }
+    }*/
 
     /**
      * This interface must be implemented by activities that contain this

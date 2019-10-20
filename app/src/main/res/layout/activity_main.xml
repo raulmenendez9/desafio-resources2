@@ -6,10 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <frameLayout  android:name="sv.edu.bitlab.bitlab_resources_hw.FormularioFragment"
-        android:id="@+id/formulario_fragment"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:id="@+id/fragment"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment2"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
