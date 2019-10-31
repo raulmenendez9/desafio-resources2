@@ -12,7 +12,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 import kotlinx.android.synthetic.main.fragment_formulario.*
+import java.io.File
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -56,6 +59,8 @@ class FormularioFragment : Fragment(), AdapterView.OnItemSelectedListener {
     val accountss : MutableList<String>?=null
     //accediendo a la instancia de firestore
     val db= FirebaseFirestore.getInstance()
+    var storageRef: StorageReference = FirebaseStorage.getInstance().reference
+    val imageImagesRef = storageRef.child("accounts-image/image_raul.png")//nombre del archivo a publicar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -82,13 +87,13 @@ class FormularioFragment : Fragment(), AdapterView.OnItemSelectedListener {
         accountEmail = view.findViewById(R.id.input_correo)
         accountPhone=view.findViewById(R.id.input_telphone)
         accountFoundOutBy=view.findViewById(R.id.spinner_find_out)
-        ArrayAdapter.createFromResource(activity!!.applicationContext,R.array.spinner,android.R.layout.simple_spinner_item).also {
+        spintext = accountFoundOutBy!!.selectedItem.toString()
+        /*ArrayAdapter.createFromResource(activity!!.applicationContext,R.array.spinner,android.R.layout.simple_spinner_item).also {
             adapter -> adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             accountFoundOutBy!!.adapter = adapter
-        }
+        }*/
         constraint_success = view.findViewById<View>(R.id.constraint_success)
         mHandler = Handler(Looper.getMainLooper())
-
         btn.setOnClickListener {
             mHandler!!.post(mRunnable)
         }
@@ -115,21 +120,26 @@ class FormularioFragment : Fragment(), AdapterView.OnItemSelectedListener {
             Toast.makeText(activity, "Debe ingresar nombre y correo", Toast.LENGTH_LONG).show()
 
         }else{
-            accountFoundOutBy?.onItemSelectedListener=this
+            //accountFoundOutBy?.onItemSelectedListener=this
             //Toast.makeText(activity, "$accountPhone", Toast.LENGTH_LONG).show()
+            //Storage
+            var image = Uri.parse("android.resource//sv.edu.bitlab.raul/drawable/image_1")
+            imageImagesRef.putFile(image).addOnSuccessListener {
+                var url =imageImagesRef.downloadUrl.result
+                var name = accountName!!.text.toString()
+                var email = accountEmail!!.text.toString()
+                var phone = accountPhone!!.text.toString()
 
-
-            var name=accountName!!.text.toString()
-            var email = accountEmail!!.text.toString()
-            var phone = accountPhone!!.text.toString()
-
-            val accounts: Account= Account("$name","$email", "$phone", "$spintext", "image")
-            db.collection("accounts")
-                .add(accounts)
-                .addOnSuccessListener{documentReference -> Log.d("EnvioData", "$accounts")
-                    Toast.makeText(activity, "Enviado con exito", Toast.LENGTH_LONG).show()}
-                .addOnFailureListener { e -> Log.w("Error", "$e") }
-            listener!!.loadsucces(CollectionViewFragment())
+                val accounts: Account = Account("$name", "$email", "$phone", "$spintext", "$url")
+                db.collection("accounts")
+                    .add(accounts)
+                    .addOnSuccessListener { documentReference ->
+                        Log.d("EnvioData", "$accounts")
+                        Toast.makeText(activity, "Enviado con exito", Toast.LENGTH_LONG).show()
+                    }
+                    .addOnFailureListener { e -> Log.w("Error", "$e") }
+                listener!!.loadsucces(CollectionViewFragment())
+            }
 
         }
     }
