@@ -1,4 +1,4 @@
-package sv.edu.bitlab.bitlab_resources_hw
+package sv.edu.bitlab.raul
 
 import org.junit.Test
 

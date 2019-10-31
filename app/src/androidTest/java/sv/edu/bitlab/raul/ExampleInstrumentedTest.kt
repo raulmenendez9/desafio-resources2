@@ -1,4 +1,4 @@
-package sv.edu.bitlab.bitlab_resources_hw
+package sv.edu.bitlab.raul
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("sv.edu.bitlab.bitlab_resources_hw", appContext.packageName)
+        assertEquals("sv.edu.bitlab.desafio.raul", appContext.packageName)
     }
 }
