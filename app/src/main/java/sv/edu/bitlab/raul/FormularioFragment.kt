@@ -72,7 +72,6 @@ class FormularioFragment : Fragment(), AdapterView.OnItemSelectedListener {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
-
     }
 
     override fun onCreateView(
@@ -92,12 +91,9 @@ class FormularioFragment : Fragment(), AdapterView.OnItemSelectedListener {
         accountPhone=view.findViewById(R.id.input_telphone)
         accountFoundOutBy=view.findViewById(R.id.spinner_find_out)
         spintext = accountFoundOutBy!!.selectedItem.toString()
-        /*ArrayAdapter.createFromResource(activity!!.applicationContext,R.array.spinner,android.R.layout.simple_spinner_item).also {
-            adapter -> adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            accountFoundOutBy!!.adapter = adapter
-        }*/
         constraint_success = view.findViewById<View>(R.id.constraint_success)
         mHandler = Handler(Looper.getMainLooper())
+
         btn.setOnClickListener {
             mHandler!!.post(mRunnable)
         }
@@ -116,16 +112,14 @@ class FormularioFragment : Fragment(), AdapterView.OnItemSelectedListener {
         //item?.text = p0?.getItemAtPosition(p2).toString()
          spintext= accountFoundOutBy!!.getItemAtPosition(p2).toString()
         Toast.makeText(activity, "$spintext", Toast.LENGTH_LONG).show()
-
     }
+
     fun button(){
 
         if (accountName!!.text.toString().equals("") && accountEmail!!.text.toString().equals("")){
             Toast.makeText(activity, "Debe ingresar nombre y correo", Toast.LENGTH_LONG).show()
 
         }else {
-            //accountFoundOutBy?.onItemSelectedListener=this
-            //Toast.makeText(activity, "$accountPhone", Toast.LENGTH_LONG).show()
             //Storage
             var image = Uri.parse("android.resource://" + context?.packageName + "/drawable/image_1")
             imageImagesRef.putFile(image).addOnSuccessListener {
@@ -149,6 +143,7 @@ class FormularioFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
         }
     }
+
     fun next(){
         listener!!.loadsucces(CollectionViewFragment())
 
@@ -158,7 +153,6 @@ class FormularioFragment : Fragment(), AdapterView.OnItemSelectedListener {
     fun onButtonPressed(uri: Uri) {
         listener?.onFragmentInteraction(uri)
     }
-
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -210,6 +204,7 @@ class FormularioFragment : Fragment(), AdapterView.OnItemSelectedListener {
                 }
             }
     }
+
     fun success(){
         when(i){
             1->{
@@ -222,8 +217,6 @@ class FormularioFragment : Fragment(), AdapterView.OnItemSelectedListener {
                 i=1
             }
         }
-
-
     }
 
     fun showSuccess(show: Boolean){

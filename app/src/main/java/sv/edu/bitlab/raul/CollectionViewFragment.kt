@@ -63,24 +63,15 @@ class CollectionViewFragment : Fragment() {
             atras()
         }
         setUpRecyclerView()
-
-
-        /*db.collection("accounts").get().addOnSuccessListener { result->
-            for (document in result){
-                Log.d("recibo","${document.id}=>${document.data}")
-            }
-        }.addOnFailureListener { exception ->
-            Log.w("Error","Error al recibir dara", exception)
-        }*/
     }
 
     // TODO: Rename method, update argument and hook method into UI event
     fun onButtonPressed(uri: Uri) {
         listener?.onFragmentInteraction(uri)
     }
+
      fun setUpRecyclerView(){
          var query:Query=collecRef.orderBy("accountName", Query.Direction.DESCENDING)
-
          var options : FirestoreRecyclerOptions<Account> = FirestoreRecyclerOptions.Builder<Account>()
              .setQuery(query,Account::class.java)
              .build()
@@ -97,6 +88,7 @@ class CollectionViewFragment : Fragment() {
         super.onStart()
         adapter!!.startListening()
     }
+
     override fun onStop(){
         super.onStop()
         adapter!!.startListening()

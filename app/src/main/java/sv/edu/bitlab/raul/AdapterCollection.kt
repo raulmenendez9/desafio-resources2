@@ -29,7 +29,6 @@ class AdapterCollection(options: FirestoreRecyclerOptions<Account>) :
             imageGlide(image,model.accountImage)
 
         }
-
     }
 
     inner class CollectionHolder( override val containerView: View) : RecyclerView.ViewHolder(containerView),LayoutContainer {
@@ -38,12 +37,8 @@ class AdapterCollection(options: FirestoreRecyclerOptions<Account>) :
         var phone =containerView.findViewById<TextView>(R.id.text_set_numero_tel)
         var foundby = containerView.findViewById<TextView>(R.id.text_set_enterado)
         var image = containerView.findViewById<ImageView>(R.id.image_1)
-
-
-
-
-
     }
+
     fun imageGlide(imageView: ImageView, url: String?){
         Glide.with(imageView).load(url).into(imageView)
     }

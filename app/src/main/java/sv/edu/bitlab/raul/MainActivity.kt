@@ -9,17 +9,16 @@ import android.view.View
 import kotlinx.android.synthetic.main.fragment_formulario.*
 
 class MainActivity : AppCompatActivity(), FormularioFragment.OnFragmentInteractionListener, CollectionViewFragment.OnFragmentInteractionListener {
+
     override fun atras(fr: FormularioFragment) {
         val formmu = supportFragmentManager.beginTransaction()
         formmu.replace(R.id.fragment, fr).addToBackStack(null)
         formmu.commit()
     }
 
-
     override fun onFragmentInteraction(uri: Uri) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
