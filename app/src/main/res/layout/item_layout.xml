@@ -14,7 +14,7 @@
     <ImageView
         android:id="@+id/image_1"
         android:layout_width="142dp"
-        android:layout_height="166dp"
+        android:layout_height="150dp"
         android:layout_marginLeft="20dp"
         android:contentDescription="@string/descripcion_de_la_imagen_que_se_cargara_desde_firebase"
         app:srcCompat="@drawable/image_1" />
@@ -77,8 +77,8 @@
             <TextView
                 android:id="@+id/text_enterado"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0dp"
                 android:fontFamily="@font/roboto"
 
                 android:text="@string/me_entero_po"
@@ -88,9 +88,9 @@
             <TextView
                 android:id="@+id/text_set_enterado"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0dp"
                 android:fontFamily="@font/roboto"
-                android:layout_marginTop="20dp"
                 android:text="@string/me_entero_po"
                 android:textColor="@color/blanco"
                 android:textSize="14sp" />

@@ -9,7 +9,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.firebase.ui.firestore.FirestoreRecyclerOptions
+import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -30,6 +35,8 @@ class CollectionViewFragment : Fragment() {
     private var param2: String? = null
     private var listener: OnFragmentInteractionListener? = null
     val db= FirebaseFirestore.getInstance()
+    var collecRef: CollectionReference = db.collection("accounts")
+    var adapter:AdapterCollection?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,19 +62,44 @@ class CollectionViewFragment : Fragment() {
         text_nuevo.setOnClickListener{
             atras()
         }
+        setUpRecyclerView()
 
-        db.collection("accounts").get().addOnSuccessListener { result->
+
+        /*db.collection("accounts").get().addOnSuccessListener { result->
             for (document in result){
                 Log.d("recibo","${document.id}=>${document.data}")
             }
         }.addOnFailureListener { exception ->
             Log.w("Error","Error al recibir dara", exception)
-        }
+        }*/
     }
 
     // TODO: Rename method, update argument and hook method into UI event
     fun onButtonPressed(uri: Uri) {
         listener?.onFragmentInteraction(uri)
+    }
+     fun setUpRecyclerView(){
+         var query:Query=collecRef.orderBy("accountName", Query.Direction.DESCENDING)
+
+         var options : FirestoreRecyclerOptions<Account> = FirestoreRecyclerOptions.Builder<Account>()
+             .setQuery(query,Account::class.java)
+             .build()
+
+         adapter = AdapterCollection(options)
+
+         var recyclerView = view?.findViewById<RecyclerView>(R.id.recyclerView)
+         recyclerView!!.setHasFixedSize(true)
+         recyclerView.layoutManager = LinearLayoutManager(this.context)
+         recyclerView.adapter=adapter
+     }
+
+     override fun onStart(){
+        super.onStart()
+        adapter!!.startListening()
+    }
+    override fun onStop(){
+        super.onStop()
+        adapter!!.startListening()
     }
 
     fun atras(){

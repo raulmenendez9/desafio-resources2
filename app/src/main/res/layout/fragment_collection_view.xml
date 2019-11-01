@@ -49,6 +49,7 @@ tools:context="CollectionViewFragment"
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="378dp"
             android:layout_height="592dp"
+            android:id="@+id/recyclerView"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -15,7 +15,7 @@
     <string name="ver_coleccion">Ver colección</string>
     <string name="agregar_nuevo_registro">Agregar nuevo registro</string>
     <string name="correo_electronico">Correo electronico</string>
-    <string name="me_entero_po">Me entero po:</string>
+    <string name="me_entero_po">Me entero por:</string>
     <string name="descripcion_de_la_imagen_que_se_cargara_desde_firebase">descripcion de la imagen que se cargara desde firebase</string>
     <string-array name="spinner">
         <item>Por redes sociales</item>

@@ -11,9 +11,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import com.google.android.gms.tasks.Task
+import com.google.android.gms.tasks.Tasks
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.storage.FileDownloadTask
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
+import com.google.firebase.storage.UploadTask
 import kotlinx.android.synthetic.main.fragment_formulario.*
 import java.io.File
 
@@ -49,7 +53,7 @@ class FormularioFragment : Fragment(), AdapterView.OnItemSelectedListener {
     var constraint_success: View?=null
     val mRunnable = object :Runnable{
         override fun run() {
-            mHandler!!.postDelayed(this,5000)
+            mHandler!!.postDelayed(this,3000)
             success()
         }
     }
@@ -60,7 +64,7 @@ class FormularioFragment : Fragment(), AdapterView.OnItemSelectedListener {
     //accediendo a la instancia de firestore
     val db= FirebaseFirestore.getInstance()
     var storageRef: StorageReference = FirebaseStorage.getInstance().reference
-    val imageImagesRef = storageRef.child("accounts-image/image_raul.png")//nombre del archivo a publicar
+    val imageImagesRef = storageRef.child("accounts-image/${System.currentTimeMillis()}_image_raul.png")//nombre del archivo a publicar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -119,13 +123,14 @@ class FormularioFragment : Fragment(), AdapterView.OnItemSelectedListener {
         if (accountName!!.text.toString().equals("") && accountEmail!!.text.toString().equals("")){
             Toast.makeText(activity, "Debe ingresar nombre y correo", Toast.LENGTH_LONG).show()
 
-        }else{
+        }else {
             //accountFoundOutBy?.onItemSelectedListener=this
             //Toast.makeText(activity, "$accountPhone", Toast.LENGTH_LONG).show()
             //Storage
-            var image = Uri.parse("android.resource//sv.edu.bitlab.raul/drawable/image_1")
+            var image = Uri.parse("android.resource://" + context?.packageName + "/drawable/image_1")
             imageImagesRef.putFile(image).addOnSuccessListener {
-                var url =imageImagesRef.downloadUrl.result
+                imageImagesRef.downloadUrl.addOnCompleteListener { taskSnapshot ->
+                    var url = taskSnapshot.result
                 var name = accountName!!.text.toString()
                 var email = accountEmail!!.text.toString()
                 var phone = accountPhone!!.text.toString()
@@ -140,6 +145,7 @@ class FormularioFragment : Fragment(), AdapterView.OnItemSelectedListener {
                     .addOnFailureListener { e -> Log.w("Error", "$e") }
                 listener!!.loadsucces(CollectionViewFragment())
             }
+        }
 
         }
     }
