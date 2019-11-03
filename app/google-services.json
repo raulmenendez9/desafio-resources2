@@ -1,0 +1,344 @@
+{
+  "project_info": {
+    "project_number": "678848165659",
+    "firebase_url": "https://bitlab-students-9bb27.firebaseio.com",
+    "project_id": "bitlab-students-9bb27",
+    "storage_bucket": "bitlab-students-9bb27.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678848165659:android:16e4a9a1a50f79e9a405be",
+        "android_client_info": {
+          "package_name": "sv.edu.bitlab.desafio.dennis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "678848165659-obr1dbegkdufj3hmrrpkkin8mi78qq0k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sv.edu.bitlab.desafio.dennis",
+            "certificate_hash": "17072c9c5215b6cba59cfd2dbdda948153f1f39e"
+          }
+        },
+        {
+          "client_id": "678848165659-a7549icqdog7hu9ie3sqdtoj4nu3mc18.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7bxwvZElk53kjQWVB-btU8ZaNrw6jhns"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "678848165659-a7549icqdog7hu9ie3sqdtoj4nu3mc18.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678848165659:android:2cf9ba952702babea405be",
+        "android_client_info": {
+          "package_name": "sv.edu.bitlab.desafio.gilberto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "678848165659-s29g03jpqph5hg402ket5iigtb78bj6i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sv.edu.bitlab.desafio.gilberto",
+            "certificate_hash": "d68dfd85f2239fe6070bb56c879fbeb2ac1a1aac"
+          }
+        },
+        {
+          "client_id": "678848165659-a7549icqdog7hu9ie3sqdtoj4nu3mc18.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7bxwvZElk53kjQWVB-btU8ZaNrw6jhns"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "678848165659-a7549icqdog7hu9ie3sqdtoj4nu3mc18.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678848165659:android:3ee2b08c48c4d171a405be",
+        "android_client_info": {
+          "package_name": "sv.edu.bitlab.desafio.guillermo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "678848165659-84o5tm8hh2304g38d24btmfckb8tfqut.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sv.edu.bitlab.desafio.guillermo",
+            "certificate_hash": "692c48d4d7b08480ac7f8011f6a112e59fbe7732"
+          }
+        },
+        {
+          "client_id": "678848165659-a7549icqdog7hu9ie3sqdtoj4nu3mc18.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7bxwvZElk53kjQWVB-btU8ZaNrw6jhns"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "678848165659-a7549icqdog7hu9ie3sqdtoj4nu3mc18.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678848165659:android:e44f998e420184f5a405be",
+        "android_client_info": {
+          "package_name": "sv.edu.bitlab.desafio.jorge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "678848165659-btn6gpi73teumg0gjep543pmhqevaa9r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sv.edu.bitlab.desafio.jorge",
+            "certificate_hash": "2574183b6cb6c72575ad2258fc78fb20f0373666"
+          }
+        },
+        {
+          "client_id": "678848165659-a7549icqdog7hu9ie3sqdtoj4nu3mc18.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7bxwvZElk53kjQWVB-btU8ZaNrw6jhns"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "678848165659-a7549icqdog7hu9ie3sqdtoj4nu3mc18.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678848165659:android:71c25d3ac060d557a405be",
+        "android_client_info": {
+          "package_name": "sv.edu.bitlab.desafio.victor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "678848165659-2vgv0khe6hpiheun3ir4rfchc6u9s0ku.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sv.edu.bitlab.desafio.victor",
+            "certificate_hash": "c3469eb2065f77a5526d11a9b1b83a0b66c0e459"
+          }
+        },
+        {
+          "client_id": "678848165659-a7549icqdog7hu9ie3sqdtoj4nu3mc18.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7bxwvZElk53kjQWVB-btU8ZaNrw6jhns"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "678848165659-a7549icqdog7hu9ie3sqdtoj4nu3mc18.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678848165659:android:d3e0da386fcb6a41a405be",
+        "android_client_info": {
+          "package_name": "sv.edu.bitlab.desafio_ricardo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "678848165659-0i1m5ukhs33pbrvd59a2gis9q31vptcg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sv.edu.bitlab.desafio_ricardo",
+            "certificate_hash": "6d079c59683170c642db87a2c7624a6547b964f9"
+          }
+        },
+        {
+          "client_id": "678848165659-a7549icqdog7hu9ie3sqdtoj4nu3mc18.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7bxwvZElk53kjQWVB-btU8ZaNrw6jhns"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "678848165659-a7549icqdog7hu9ie3sqdtoj4nu3mc18.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678848165659:android:38ac5ca04ada9a8ca405be",
+        "android_client_info": {
+          "package_name": "sv.edu.bitlab.moises"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "678848165659-28p5b66cn87votg7rp6fj64mog674o4m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sv.edu.bitlab.moises",
+            "certificate_hash": "b00c1d3004151668928ec83e24750cdf15c973c5"
+          }
+        },
+        {
+          "client_id": "678848165659-a7549icqdog7hu9ie3sqdtoj4nu3mc18.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7bxwvZElk53kjQWVB-btU8ZaNrw6jhns"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "678848165659-a7549icqdog7hu9ie3sqdtoj4nu3mc18.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678848165659:android:0929402cd786b74ea405be",
+        "android_client_info": {
+          "package_name": "sv.edu.bitlab.raul"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "678848165659-cg91hu553spbaboeab83cea1n24tmh9e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sv.edu.bitlab.raul",
+            "certificate_hash": "9fbf32759e93c18dddfa20c2172a38c644f9c906"
+          }
+        },
+        {
+          "client_id": "678848165659-a7549icqdog7hu9ie3sqdtoj4nu3mc18.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7bxwvZElk53kjQWVB-btU8ZaNrw6jhns"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "678848165659-a7549icqdog7hu9ie3sqdtoj4nu3mc18.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678848165659:android:e2a95023f64e8585a405be",
+        "android_client_info": {
+          "package_name": "sv.edu.bitlab.resources2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "678848165659-tivm0ikp12perq6hcrn1knrlt8kosl3a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sv.edu.bitlab.resources2",
+            "certificate_hash": "5011a82fb4cf1a8182505a89b23817cc1e9dced1"
+          }
+        },
+        {
+          "client_id": "678848165659-a7549icqdog7hu9ie3sqdtoj4nu3mc18.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7bxwvZElk53kjQWVB-btU8ZaNrw6jhns"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "678848165659-a7549icqdog7hu9ie3sqdtoj4nu3mc18.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
