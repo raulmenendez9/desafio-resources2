@@ -3,9 +3,6 @@ package sv.edu.bitlab.raul
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.view.View
 import kotlinx.android.synthetic.main.fragment_formulario.*
 
 class MainActivity : AppCompatActivity(), FormularioFragment.OnFragmentInteractionListener, CollectionViewFragment.OnFragmentInteractionListener {
